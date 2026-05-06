@@ -27,37 +27,58 @@ The system follows the book's **D-E-A-L** sequence: **D**efinition → **E**limi
 
 The 2026 extensions sit primarily in the Automation phase, where the book is most out-of-date.
 
-```
-                      ┌──────────────────────────────┐
-                      │      lifestyle-design        │
-                      │   (read by every skill)      │
-                      └──────────────┬───────────────┘
-                                     │
-        ┌────────────┬───────────────┼────────────────┬─────────────┐
-        ▼            ▼               ▼                ▼             ▼
-   ┌─────────┐  ┌─────────┐    ┌──────────┐    ┌────────────┐ ┌──────────┐
-   │   D     │  │   E     │    │    A     │    │     L      │ │  Mindset │
-   │Define   │  │Eliminate│    │ Automate │    │  Liberate  │ │  & Style │
-   ├─────────┤  ├─────────┤    ├──────────┤    ├────────────┤ ├──────────┤
-   │dreamlin │  │eighty-  │    │automate- │    │remote-work │ │new-rich- │
-   │  -ing   │  │ twenty  │    │  first ★ │    │ -proposal  │ │  rules   │
-   │fear-    │  │parkinso │    │make-it-  │    │mini-       │ │comfort-  │
-   │ setting │  │ns-law   │    │ a-skill ★│    │ retirement │ │ challenge│
-   │relative │  │low-info │    │outsourcin│    │            │ │cold-     │
-   │ -income │  │ -diet   │    │ g (AI-   │    │            │ │ outreach │
-   │         │  │not-to-do│    │ first)   │    │            │ │expert-   │
-   │         │  │batching │    │email-    │    │            │ │ research │
-   │         │  │interrup │    │ autores. │    │            │ │deep-     │
-   │         │  │ -killer │    │muse      │    │            │ │ research★│
-   │         │  │         │    │muse-test │    │            │ │          │
-   │         │  │         │    │muse-     │    │            │ │          │
-   │         │  │         │    │ launcher★│    │            │ │          │
-   │         │  │         │    │income-   │    │            │ │          │
-   │         │  │         │    │ autopilot│    │            │ │          │
-   └─────────┘  └─────────┘    └──────────┘    └────────────┘ └──────────┘
+```mermaid
+flowchart TD
+    LD["**lifestyle-design**\n*(read by every skill)*"]
 
-   ★ = 2026 AI extensions
+    LD --> D & E & A & L & M
+
+    subgraph D["D — Define"]
+        direction TB
+        D1[dreamlining]
+        D2[fear-setting]
+        D3[relative-income]
+    end
+
+    subgraph E["E — Eliminate"]
+        direction TB
+        E1[eighty-twenty]
+        E2[parkinsons-law]
+        E3[low-info-diet]
+        E4[not-to-do-list]
+        E5[batching]
+        E6[interruption-killer]
+    end
+
+    subgraph A["A — Automate"]
+        direction TB
+        A1[automate-first ★]
+        A2[make-it-a-skill ★]
+        A3[outsourcing]
+        A4[email-autoresponder]
+        A5[muse]
+        A6[muse-test]
+        A7[muse-launcher ★]
+        A8[income-autopilot]
+    end
+
+    subgraph L["L — Liberate"]
+        direction TB
+        L1[remote-work-proposal]
+        L2[mini-retirement]
+    end
+
+    subgraph M["Mindset & Style"]
+        direction TB
+        M1[new-rich-rules]
+        M2[comfort-challenge]
+        M3[cold-outreach]
+        M4[expert-research]
+        M5[deep-research ★]
+    end
 ```
+
+★ = 2026 AI extensions
 
 See each skill's **Related Skills** section for the full map.
 
