@@ -4,7 +4,7 @@
     "name": "SidekicksStudio"
   },
   "metadata": {
-    "description": "From The 4-Hour Workweek to the 2-Minute Work Week — skills for Tim Ferriss's frameworks plus 2026 AI-native extensions (automate-first, make-it-a-skill, muse-launcher, deep-research)",
+    "description": "From The 4-Hour Workweek to the 2-Minute Work Week: Skills from Tim Ferriss's Book for Claude Code and AI agents. Plus a few modern approaches that lean into AI-first automation",
     "version": "2.0.0",
     "repository": "https://github.com/SidekicksStudio/fhww-skills"
   },

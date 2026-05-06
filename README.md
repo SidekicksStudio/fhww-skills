@@ -1,6 +1,6 @@
 # From the 4-Hour Workweek to the 2-Minute Work Week
 
-A collection of AI agent skills that turn the frameworks, exercises, and life-hacks from Tim Ferriss's *The 4-Hour Workweek* into things you can run against your personal situation — plus a 2026 layer that "outsources" repatative or low cognition tasks to AI.
+A collection of AI agent skills that turn the frameworks, exercises, and life-hacks from Tim Ferriss's _The 4-Hour Workweek_ into things you can run against your personal situation — plus a 2026 layer that "outsources" repatative or low cognition tasks to AI.
 
 Built for anyone who wants to apply lifestyle design to their work, business, or life — with an AI agent doing the heavy lifting on the structured exercises Tim makes you do in the book, and on the operational work he made you hire a person for.
 
@@ -10,7 +10,7 @@ Works with Claude Code, Cursor, Codex, Windsurf, Cowork, and any agent that supp
 
 ## What's in the box
 
-These skills are not summaries of the book. They are the **exercises themselves**, run as a guided conversation. Most of them won't tell you what to do — they'll force *you* to answer the same uncomfortable questions Tim makes the reader answer.
+These skills are not summaries of the book. They are the **exercises themselves**, run as a guided conversation. Most of them won't tell you what to do — they'll force _you_ to answer the same uncomfortable questions Tim makes the reader answer.
 
 The set includes:
 
@@ -20,7 +20,6 @@ The set includes:
 If you've never read the book or didn't do the exercises, start with `/dreamlining`. It's the engine of the whole system.
 
 If you have followed the book and want a refresher run through, start with `/deal-framework`.
-
 
 ## How the skills fit together
 
@@ -65,34 +64,36 @@ See each skill's **Related Skills** section for the full map.
 ## Available Skills
 
 <!-- SKILLS:START -->
-| Skill | Description |
-|-------|-------------|
-| [lifestyle-design](skills/lifestyle-design/) | Foundation context every other skill reads first — your current life, constraints, dreamlines, target monthly income, and freedom criteria. |
-| [dreamlining](skills/dreamlining/) | The dreamline exercise from chapter 4 — 6-month and 12-month "having / being / doing" goals, target monthly income calculation, and the three steps that make each dream real. |
-| [fear-setting](skills/fear-setting/) | Tim's fear-setting exercise — define the nightmare, plan the repair, weigh the cost of inaction. The replacement for goal-setting when something scares you. |
-| [deal-framework](skills/deal-framework/) | Top-level walkthrough of D-E-A-L — Definition, Elimination, Automation, Liberation. Routes you to the right sub-skill at each step. |
-| [new-rich-rules](skills/new-rich-rules/) | The 9 mindset rules that change the rules — retirement is worst-case insurance, being unrealistic is easier, doing vs. being busy. The philosophical foundation. |
-| [relative-income](skills/relative-income/) | Calculate relative income (W = $/hour × freedom) instead of absolute income. Geo-arbitrage math and freedom-weighted decision making. |
-| [eighty-twenty](skills/eighty-twenty/) | 80/20 (Pareto) audit of your customers, products, time, and stress. The two questions Tim asked that 10x'd his income. |
-| [parkinsons-law](skills/parkinsons-law/) | Apply Parkinson's Law: shrink deadlines, force the impossible, combine with 80/20 for the output multiplier. |
-| [low-info-diet](skills/low-info-diet/) | Information fasting — the 1-week and ongoing protocol, what to consume, selective ignorance rules. |
-| [not-to-do-list](skills/not-to-do-list/) | Build a not-to-do list from Tim's 9 habits to eliminate. The opposite of a to-do list, and usually more important. |
-| [batching](skills/batching/) | Batch email, calls, errands, and content to kill switching costs. The math behind why batching works. |
-| [interruption-killer](skills/interruption-killer/) | Eliminate the three types of interruption — time wasters, time consumers, empowerment failures — with specific scripts for each. |
-| [email-autoresponder](skills/email-autoresponder/) | Tim's autoresponder template + the email policy: check twice a day, batch, never first thing in the morning. |
-| [outsourcing](skills/outsourcing/) | Outsource your life — AI-first triage (Step 0) before any human VA. What to hand to AI, what to a script, what to a scheduled task, what to a person. |
-| [automate-first](skills/automate-first/) ★ | The 2026 default-mode shift. Decision tree for any task: AI prompt / AI agent / script / scheduled task / Claude skill / human VA / DIY. The standalone version of `/outsourcing` Step 0. |
-| [make-it-a-skill](skills/make-it-a-skill/) ★ | Wrap a recurring task as a reusable Claude skill or scheduled task. Routes between Anthropic's `skill-creator` and `schedule`. Never do the same thing twice. |
-| [muse](skills/muse/) | Evaluate or shape a business idea against the muse criteria — $50-200 price, 8-15 hr/week, 90%+ automatable. Interrogate your codebase or business and see how it fits. |
-| [muse-test](skills/muse-test/) | Cheaply test a muse before you build it — landing-page-and-ads test, pre-orders, micro-tests for demand validation. |
-| [muse-launcher](skills/muse-launcher/) ★ | The 2026 build phase. Once `/muse-test` passes, scaffold landing page, payments, email, ads, analytics in hours. Hard gate on testing first. |
-| [income-autopilot](skills/income-autopilot/) | Architect a muse to run on autopilot — payment, fulfillment, customer service, the management black box that lets you disappear. |
-| [remote-work-proposal](skills/remote-work-proposal/) | The Liberate negotiation — convince your boss to let you work remote using the 5-step "ask forgiveness, not permission" sequence. |
-| [mini-retirement](skills/mini-retirement/) | Plan a mini-retirement — 1-6 months somewhere new, geographic arbitrage, what to set up before you go and what to wind down. |
-| [comfort-challenge](skills/comfort-challenge/) | The daily comfort challenges from the book — eye contact, ask for a discount, the lie-down, two-cup-of-coffee. Calibrated to your current edge. |
-| [cold-outreach](skills/cold-outreach/) | Cold outreach in Tim's style — short, peer-level, asking for help (not selling), specific questions, no jargon. |
-| [expert-research](skills/expert-research/) | Find real people who have already done the thing you want to do, then design a focused interview to extract what they wish they'd known. The skill Tim used to research the book itself. |
-| [deep-research](skills/deep-research/) ★ | AI deep-research counterpart to `/expert-research`. For questions answerable from public sources at scale — competitive analysis, market sizing, source compilation. Pair with `/expert-research`, don't substitute. |
+
+| Skill                                                | Description                                                                                                                                                                                                          |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [lifestyle-design](skills/lifestyle-design/)         | Foundation context every other skill reads first — your current life, constraints, dreamlines, target monthly income, and freedom criteria.                                                                          |
+| [dreamlining](skills/dreamlining/)                   | The dreamline exercise from chapter 4 — 6-month and 12-month "having / being / doing" goals, target monthly income calculation, and the three steps that make each dream real.                                       |
+| [fear-setting](skills/fear-setting/)                 | Tim's fear-setting exercise — define the nightmare, plan the repair, weigh the cost of inaction. The replacement for goal-setting when something scares you.                                                         |
+| [deal-framework](skills/deal-framework/)             | Top-level walkthrough of D-E-A-L — Definition, Elimination, Automation, Liberation. Routes you to the right sub-skill at each step.                                                                                  |
+| [new-rich-rules](skills/new-rich-rules/)             | The 9 mindset rules that change the rules — retirement is worst-case insurance, being unrealistic is easier, doing vs. being busy. The philosophical foundation.                                                     |
+| [relative-income](skills/relative-income/)           | Calculate relative income (W = $/hour × freedom) instead of absolute income. Geo-arbitrage math and freedom-weighted decision making.                                                                                |
+| [eighty-twenty](skills/eighty-twenty/)               | 80/20 (Pareto) audit of your customers, products, time, and stress. The two questions Tim asked that 10x'd his income.                                                                                               |
+| [parkinsons-law](skills/parkinsons-law/)             | Apply Parkinson's Law: shrink deadlines, force the impossible, combine with 80/20 for the output multiplier.                                                                                                         |
+| [low-info-diet](skills/low-info-diet/)               | Information fasting — the 1-week and ongoing protocol, what to consume, selective ignorance rules.                                                                                                                   |
+| [not-to-do-list](skills/not-to-do-list/)             | Build a not-to-do list from Tim's 9 habits to eliminate. The opposite of a to-do list, and usually more important.                                                                                                   |
+| [batching](skills/batching/)                         | Batch email, calls, errands, and content to kill switching costs. The math behind why batching works.                                                                                                                |
+| [interruption-killer](skills/interruption-killer/)   | Eliminate the three types of interruption — time wasters, time consumers, empowerment failures — with specific scripts for each.                                                                                     |
+| [email-autoresponder](skills/email-autoresponder/)   | Tim's autoresponder template + the email policy: check twice a day, batch, never first thing in the morning.                                                                                                         |
+| [outsourcing](skills/outsourcing/)                   | Outsource your life — AI-first triage (Step 0) before any human VA. What to hand to AI, what to a script, what to a scheduled task, what to a person.                                                                |
+| [automate-first](skills/automate-first/) ★           | The 2026 default-mode shift. Decision tree for any task: AI prompt / AI agent / script / scheduled task / Claude skill / human VA / DIY. The standalone version of `/outsourcing` Step 0.                            |
+| [make-it-a-skill](skills/make-it-a-skill/) ★         | Wrap a recurring task as a reusable Claude skill or scheduled task. Routes between Anthropic's `skill-creator` and `schedule`. Never do the same thing twice.                                                        |
+| [muse](skills/muse/)                                 | Evaluate or shape a business idea against the muse criteria — $50-200 price, 8-15 hr/week, 90%+ automatable. Interrogate your codebase or business and see how it fits.                                              |
+| [muse-test](skills/muse-test/)                       | Cheaply test a muse before you build it — landing-page-and-ads test, pre-orders, micro-tests for demand validation.                                                                                                  |
+| [muse-launcher](skills/muse-launcher/) ★             | The 2026 build phase. Once `/muse-test` passes, scaffold landing page, payments, email, ads, analytics in hours. Hard gate on testing first.                                                                         |
+| [income-autopilot](skills/income-autopilot/)         | Architect a muse to run on autopilot — payment, fulfillment, customer service, the management black box that lets you disappear.                                                                                     |
+| [remote-work-proposal](skills/remote-work-proposal/) | The Liberate negotiation — convince your boss to let you work remote using the 5-step "ask forgiveness, not permission" sequence.                                                                                    |
+| [mini-retirement](skills/mini-retirement/)           | Plan a mini-retirement — 1-6 months somewhere new, geographic arbitrage, what to set up before you go and what to wind down.                                                                                         |
+| [comfort-challenge](skills/comfort-challenge/)       | The daily comfort challenges from the book — eye contact, ask for a discount, the lie-down, two-cup-of-coffee. Calibrated to your current edge.                                                                      |
+| [cold-outreach](skills/cold-outreach/)               | Cold outreach in Tim's style — short, peer-level, asking for help (not selling), specific questions, no jargon.                                                                                                      |
+| [expert-research](skills/expert-research/)           | Find real people who have already done the thing you want to do, then design a focused interview to extract what they wish they'd known. The skill Tim used to research the book itself.                             |
+| [deep-research](skills/deep-research/) ★             | AI deep-research counterpart to `/expert-research`. For questions answerable from public sources at scale — competitive analysis, market sizing, source compilation. Pair with `/expert-research`, don't substitute. |
+
 <!-- SKILLS:END -->
 
 ★ = 2026 AI extensions ("2-minute work week" layer on top of the book skills)
@@ -154,16 +155,16 @@ Run this on the single biggest action your dreamline implies. The thing you've b
 
 Then, depending on what you find:
 
-| If your situation is… | Run this |
-|---|---|
-| "I have a job and I want freedom from it" | `/deal-framework` (the full sequence) |
-| "I have a business idea and want to validate it" | `/muse` → `/muse-test` → `/muse-launcher` |
-| "I'm overwhelmed at work" | `/eighty-twenty` → `/automate-first` → `/not-to-do-list` |
-| "I want to live abroad for a few months" | `/mini-retirement` |
-| "I want to convince my boss I should be remote" | `/remote-work-proposal` |
-| "I want to learn from people who've done this" | `/expert-research` (humans) and/or `/deep-research` (sources) |
-| "I keep doing the same thing every week" | `/automate-first` → `/make-it-a-skill` |
-| "I was about to hire a VA for X" | `/automate-first` first — usually it's automatable |
+| If your situation is…                            | Run this                                                      |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| "I have a job and I want freedom from it"        | `/deal-framework` (the full sequence)                         |
+| "I have a business idea and want to validate it" | `/muse` → `/muse-test` → `/muse-launcher`                     |
+| "I'm overwhelmed at work"                        | `/eighty-twenty` → `/automate-first` → `/not-to-do-list`      |
+| "I want to live abroad for a few months"         | `/mini-retirement`                                            |
+| "I want to convince my boss I should be remote"  | `/remote-work-proposal`                                       |
+| "I want to learn from people who've done this"   | `/expert-research` (humans) and/or `/deep-research` (sources) |
+| "I keep doing the same thing every week"         | `/automate-first` → `/make-it-a-skill`                        |
+| "I was about to hire a VA for X"                 | `/automate-first` first — usually it's automatable            |
 
 ## Direct invocation
 
@@ -249,16 +250,16 @@ Use the freedom you just bought.
 
 ## The 2-Minute Work Week layer
 
-The book was written in 2007. The frameworks (dreamlining, fear-setting, 80/20, muse, DEAL) are timeless. The *operational* recommendations — particularly "hire a VA in another country to do your research / inbox / scheduling / data work" — are mostly obsolete in 2026, because an AI agent does the same thing in 90 seconds for a fraction of a cent.
+The book was written in 2007. The frameworks (dreamlining, fear-setting, 80/20, muse, DEAL) are timeless. The _operational_ recommendations — particularly "hire a VA in another country to do your research / inbox / scheduling / data work" — are mostly obsolete in 2026, because an AI agent does the same thing in 90 seconds for a fraction of a cent.
 
 The 2-minute work week is the same DEAL framework with one default flipped:
 
-| Phase | 2007 default | 2026 default |
-|---|---|---|
-| Definition | Write down what you want | (unchanged) |
-| Elimination | Cut the bottom 20% | (unchanged) |
+| Phase          | 2007 default                 | 2026 default                                                       |
+| -------------- | ---------------------------- | ------------------------------------------------------------------ |
+| Definition     | Write down what you want     | (unchanged)                                                        |
+| Elimination    | Cut the bottom 20%           | (unchanged)                                                        |
 | **Automation** | **Find a person to do this** | **Find an AI to do this; only escalate to a person when AI can't** |
-| Liberation | Go somewhere | (unchanged) |
+| Liberation     | Go somewhere                 | (unchanged)                                                        |
 
 The four skills marked ★ implement this default-flip:
 
@@ -271,7 +272,7 @@ The book's `/outsourcing` skill has also been updated to run an AI-first triage 
 
 If you also have [coreyhaines's marketing skills](https://github.com/coreyhaines31/marketingskills) installed, `/muse-launcher` will hand off to them for landing-page copy, ads, analytics, and email sequences. Otherwise it's self-contained.
 
-## What this is *not*
+## What this is _not_
 
 - It is not a summary or rewrite of the book. Read the book.
 - It is not life advice. Tim's advice may or may not work for you.
