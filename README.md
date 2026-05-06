@@ -29,53 +29,16 @@ The 2026 extensions sit primarily in the Automation phase, where the book is mos
 
 ```mermaid
 flowchart TD
-    LD["**lifestyle-design**\n*(read by every skill)*"]
+    LD["lifestyle-design\n(read by every skill)"]
 
-    LD --> D & E & A & L & M
+    D["D — Define\ndreamlining · fear-setting · relative-income"]
+    E["E — Eliminate\neighty-twenty · parkinsons-law · low-info-diet\nnot-to-do-list · batching · interruption-killer"]
+    A["A — Automate\nautomate-first ★ · make-it-a-skill ★ · outsourcing\nemail-autoresponder · muse · muse-test\nmuse-launcher ★ · income-autopilot"]
+    L["L — Liberate\nremote-work-proposal · mini-retirement"]
+    M["Mindset & Style\nnew-rich-rules · comfort-challenge · cold-outreach\nexpert-research · deep-research ★"]
 
-    subgraph D["D — Define"]
-        direction TB
-        D1[dreamlining]
-        D2[fear-setting]
-        D3[relative-income]
-    end
-
-    subgraph E["E — Eliminate"]
-        direction TB
-        E1[eighty-twenty]
-        E2[parkinsons-law]
-        E3[low-info-diet]
-        E4[not-to-do-list]
-        E5[batching]
-        E6[interruption-killer]
-    end
-
-    subgraph A["A — Automate"]
-        direction TB
-        A1[automate-first ★]
-        A2[make-it-a-skill ★]
-        A3[outsourcing]
-        A4[email-autoresponder]
-        A5[muse]
-        A6[muse-test]
-        A7[muse-launcher ★]
-        A8[income-autopilot]
-    end
-
-    subgraph L["L — Liberate"]
-        direction TB
-        L1[remote-work-proposal]
-        L2[mini-retirement]
-    end
-
-    subgraph M["Mindset & Style"]
-        direction TB
-        M1[new-rich-rules]
-        M2[comfort-challenge]
-        M3[cold-outreach]
-        M4[expert-research]
-        M5[deep-research ★]
-    end
+    LD --> D --> E --> A --> L
+    LD --> M
 ```
 
 ★ = 2026 AI extensions
