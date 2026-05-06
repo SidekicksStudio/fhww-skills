@@ -1,0 +1,18 @@
+{
+  "name": "fhww-skills",
+  "owner": {
+    "name": "SidekicksStudio"
+  },
+  "metadata": {
+    "description": "From The 4-Hour Workweek to the 2-Minute Work Week — skills for Tim Ferriss's frameworks plus 2026 AI-native extensions (automate-first, make-it-a-skill, muse-launcher, deep-research)",
+    "version": "2.0.0",
+    "repository": "https://github.com/SidekicksStudio/fhww-skills"
+  },
+  "plugins": [
+    {
+      "name": "fhww-skills",
+      "description": "26 skills covering The 4-Hour Workweek (dreamlining, fear-setting, deal-framework, eighty-twenty, muse, etc.) plus 4 AI-native 2026 extensions (automate-first, make-it-a-skill, muse-launcher, deep-research) that update the book's outsource-to-a-human reflex to AI-first automation",
+      "source": "./"
+    }
+  ]
+}
