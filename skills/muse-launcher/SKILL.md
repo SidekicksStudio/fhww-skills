@@ -16,13 +16,20 @@ Your most important job: **prevent over-building**. The single most common found
 Refuse to run unless **both** are true:
 
 1. **A muse evaluation file exists** (`muse-evaluation-*.md`) showing a "Strong" or "Salvageable" verdict.
-2. **A muse test file exists** (`muse-test-*.md`) showing a "Strong signal" or, at minimum, recent re-tested signal that's borderline-passing.
+2. **A muse test file exists** (`muse-test-*.md`) showing a "Strong signal" or, at minimum, recent re-tested signal that's borderline-passing, **and the file includes a completed `## Handoff artifact` section** with a live landing page URL.
 
 If either is missing, do not proceed. Send the user to `/muse` and `/muse-test` first. Be firm:
 
 > "We're not going to build until we've tested. The whole point of the framework is to spend $300 and 5 days finding out if anyone wants this — before spending 80 hours building it. If the test passed, share the file. If it didn't, we go back and reshape."
 
-Once both files exist, proceed.
+Once both files exist, **load the handoff artifact section** before doing anything else. The landing page that passed the test is your starting point — you are promoting it, not replacing it.
+
+Key fields to extract and carry forward:
+- `Landing page URL` — the live page that already converted
+- `Platform` — determines what's possible without rebuilding
+- `Validated price` — do not change this without re-testing
+- `Top-performing ad variant` — seed for Step 5 campaign
+- `Checkout/intent setup` — tells you whether Path A (soft capture) needs upgrading to real payments
 
 ## What This Skill Builds
 
@@ -94,34 +101,37 @@ Before any building, capture in writing:
 
 This is the substrate every layer uses. Don't open a single editor before this is written.
 
-## Step 2: Build the landing page
+## Step 2: Promote the test page
 
-For Path A: drag-and-drop in Framer/Carrd from a SaaS landing template.
+Do not rebuild the landing page. The page from `/muse-test` already has real traffic data and a known conversion rate — rebuilding resets that and costs time you don't need to spend.
 
-For Path B: Claude Code / Cursor can scaffold Next.js + Tailwind + a single hero + feature + pricing + FAQ + CTA in 30-60 minutes. Use this prompt as the skeleton:
+The goal here is to **upgrade the test page in place**: swap the soft intent capture for real payments, harden any rough edges, and add UTM tracking. Keep the headline, copy angle, and price exactly as tested unless you have a specific reason to change them.
 
-```
-Build a Next.js 15 (App Router) landing page on Vercel for [product]
-priced at $[price] for [target market].
+### If the test page is on Carrd, Framer, Webflow, or Squarespace (Path A)
 
-Sections in order:
-1. Hero — headline (the outcome), subhead (audience + price), primary CTA
-2. Three feature/mechanism bullets
-3. One specific testimonial with photo + name + outcome
-4. Pricing card with Stripe Checkout link / button
-5. FAQ — 5 questions: refund, shipping/delivery, who it's for, who
-   it's not for, why this not [obvious alternative]
-6. Footer with company name, contact, terms, privacy
+1. Edit the existing page directly — don't clone or restart.
+2. Replace the soft checkout button/path with a real Stripe Checkout link or Lemonsqueezy checkout (see Step 3).
+3. Add UTM pass-through: most no-code platforms support custom redirect URLs with query params — carry `utm_source`, `utm_medium`, `utm_campaign` through to the Stripe metadata via the `?prefilled_promo_code` or client_reference_id param.
+4. Add GA4 or PostHog events (page_view, cta_click, checkout_started) via the platform's custom code injection or a GTM container tag.
+5. Remove any "sold out / notify me" language if you used Path A soft capture — replace with the live price and CTA.
 
-Use Tailwind. Mobile-first. Single page, no nav. No animations. No
-modal popups. No cookie banner unless user is in EU.
+### If the test page is Next.js or custom code (Path B)
 
-Add UTM-aware tracking: capture utm_source/medium/campaign/content/term
-and pass through to the Stripe metadata. Add data layer events for:
-page_view, cta_click, checkout_started, checkout_completed.
-```
+The test page already has the right structure. Surgical changes only:
 
-Cross-reference: if you have access to `coreyhaines/marketingskills/copywriting` and `page-cro` skills, hand the headline and section-by-section copy to them — they're better at this part.
+1. Replace the mock checkout handler with a real Stripe Checkout session creation.
+2. Add a Stripe webhook handler at `/api/stripe-webhook` (see Step 3).
+3. Add UTM capture middleware (read from query params on first page_view, store in cookie, pass to Stripe session metadata).
+4. Wire PostHog or GA4 events.
+
+### Only rebuild if:
+
+- The test platform (e.g. Carrd free tier) can't support Stripe Checkout or UTM pass-through.
+- The test showed the copy worked but the page structure was clearly the conversion bottleneck (you'll see this as high CTR + low page CVR).
+
+If you do rebuild, use the test page's exact headline and copy as the source of truth. Don't rewrite what already converted.
+
+Cross-reference: if you have access to `coreyhaines/marketingskills/copywriting` and `page-cro` skills, use them for copy polish and CRO review — but do not let them prompt a full rewrite on launch week.
 
 ## Step 3: Wire payments
 
@@ -162,24 +172,26 @@ For Path B: Resend for transactional, ConvertKit/MailerLite/Loops for marketing.
 
 Cross-reference: `coreyhaines/marketingskills/email-sequence` if available — much better at the actual writing.
 
-## Step 5: Wire ads
+## Step 5: Scale the test ads
 
-Pick **one** ad channel per the `/muse-test` finding. Don't multi-channel at launch.
+Don't start a new campaign. Promote the test campaign.
+
+Pull the `Top-performing ad variant` from the muse-test handoff artifact. That's your control ad. Everything else in the launch campaign is tested against it.
 
 For Google Ads:
-- 1 campaign, 2-3 ad groups based on the keyword themes
-- Search ads: 3 RSAs per ad group
-- UTMs auto-tagged
-- Conversion tracking via tag manager OR Conversion API (server-side)
-- Daily budget: 1.5-2x the `/muse-test` daily budget for the first 14 days
+- Duplicate the test campaign into the production account (or raise the test campaign budget if it's already in the right account).
+- Keep the winning ad variant as RSA #1. Add 2 new variants to test against it.
+- UTMs auto-tagged.
+- Conversion tracking: upgrade from click-through to Conversion API (server-side) now that real Stripe events exist.
+- Daily budget: 1.5-2x the `/muse-test` daily budget for the first 14 days.
 
 For Meta Ads:
-- 1 campaign, 1-2 ad sets
-- 3-5 creative variants in each
-- Conversion API (server-side via Stripe webhook → Meta CAPI)
-- Daily budget: same as Google guidance
+- Duplicate the test ad set. Keep the winning creative as the control.
+- Add 2-4 new creative variants per ad set.
+- Wire Conversion API (server-side via Stripe webhook → Meta CAPI) — this is the upgrade from the test's pixel-only tracking.
+- Daily budget: same guidance.
 
-For Reddit / TikTok / LinkedIn / YouTube — pick one only if `/muse-test` showed it's where the audience is.
+For Reddit / TikTok / LinkedIn / YouTube — only if `/muse-test` confirmed that's where the audience is. Don't add a second channel at launch.
 
 Cross-reference: `coreyhaines/marketingskills/paid-ads` and `ad-creative` if available.
 

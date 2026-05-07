@@ -151,6 +151,18 @@ Path: [A soft / B hard]
 ## Decision
 [Strong / Mixed / Weak] → [Build / Re-test / Kill]
 
+## Handoff artifact
+If Decision = Strong or Mixed-proceeding, fill this out so `/muse-launcher` can promote rather than rebuild:
+
+- Landing page URL: [live URL]
+- Platform: [Carrd / Framer / Webflow / Next.js / other]
+- Ad channel: [Google / Meta / Reddit / etc.]
+- Ad account ID: [...]
+- Top-performing ad variant: [paste headline + body]
+- Validated price: $[...]
+- Checkout/intent setup: [Path A email capture / Path B Stripe product ID / Gumroad link / etc.]
+- Copy notes: [what headline/angle pulled, what flopped]
+
 ## What I'd change next time
 - ...
 ```
