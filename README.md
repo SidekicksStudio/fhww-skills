@@ -1,6 +1,6 @@
 # From the 4-Hour Workweek to the 2-Minute Work Week
 
-A collection of AI agent skills that turn the frameworks, exercises, and life-hacks from Tim Ferriss's _The 4-Hour Workweek_ into things you can run against your personal situation — plus a 2026 layer that "outsources" repatative or low cognition tasks to AI.
+A collection of AI agent skills that turn the frameworks, exercises, and life-hacks from Tim Ferriss' _The 4-Hour Workweek_ into things you can run against your personal situation — plus an modern layer that "outsources" repatative or low cognition to AI.
 
 Built for anyone who wants to apply lifestyle design to their work, business, or life — with an AI agent doing the heavy lifting on the structured exercises Tim makes you do in the book, and on the operational work he made you hire a person for.
 
@@ -83,40 +83,53 @@ See each skill's **Related Skills** section for the full map.
 
 ## Installation
 
-### Option 1: Claude Code Plugin
+### Option 1: CLI Install (Recommended)
+
+Use `npx skills` to install skills directly:
+
+```bash
+# Install all skills
+npx skills add SidekicksStudio/fhww-skills
+
+# Install specific skills
+npx skills add SidekicksStudio/fhww-skills --skill dreamlining fear-setting
+
+# List available skills
+npx skills add SidekicksStudio/fhww-skills --list
+```
+
+This automatically installs to your `.agents/skills/` directory (and symlinks into `.claude/skills/` for Claude Code compatibility).
+
+### Option 2: Claude Code Plugin
+
+Install via Claude Code's built-in plugin system:
 
 ```bash
 # Add the marketplace
-/plugin marketplace add <your-fork>/fhww-skills
+/plugin marketplace add SidekicksStudio/fhww-skills
 
 # Install all skills
 /plugin install fhww-skills
 ```
 
-### Option 2: Clone and Copy
+### Option 3: Clone and Copy
+
+Clone the entire repo and copy the skills folder:
 
 ```bash
-git clone <your-fork>/fhww-skills.git
-cp -r fhww-skills/skills/* .claude/skills/
+git clone https://github.com/SidekicksStudio/fhww-skills.git
+cp -r fhww-skills/skills/* .agents/skills/
 ```
 
-### Option 3: Git Submodule
+### Option 4: Git Submodule
+
+Add as a submodule for easy updates:
 
 ```bash
-git submodule add <your-fork>/fhww-skills.git .claude/fhww-skills
+git submodule add https://github.com/SidekicksStudio/fhww-skills.git .agents/fhww-skills
 ```
 
-Then reference skills from `.claude/fhww-skills/skills/`.
-
-### Option 4: CLI Install (npx skills)
-
-If you use the [npx skills](https://github.com/vercel-labs/skills) installer:
-
-```bash
-npx skills add <your-fork>/fhww-skills
-npx skills add <your-fork>/fhww-skills --skill dreamlining fear-setting
-npx skills add <your-fork>/fhww-skills --list
-```
+Then reference skills from `.agents/fhww-skills/skills/`.
 
 ## Where to start
 
