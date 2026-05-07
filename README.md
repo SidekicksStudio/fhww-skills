@@ -28,17 +28,16 @@ The system follows the book's **D-E-A-L** sequence: **D**efinition → **E**limi
 The 2026 extensions sit primarily in the Automation phase, where the book is most out-of-date.
 
 ```mermaid
-flowchart TD
+flowchart TB
     LD["lifestyle-design\n(read by every skill)"]
 
-    D["D — Define\ndreamlining · fear-setting · relative-income"]
-    E["E — Eliminate\neighty-twenty · parkinsons-law · low-info-diet\nnot-to-do-list · batching · interruption-killer"]
-    A["A — Automate\nautomate-first ★ · make-it-a-skill ★ · outsourcing\nemail-autoresponder · muse · muse-test\nmuse-launcher ★ · income-autopilot"]
-    L["L — Liberate\nremote-work-proposal · mini-retirement"]
-    M["Mindset & Style\nnew-rich-rules · comfort-challenge · cold-outreach\nexpert-research · deep-research ★"]
+    D["D — Define\n• dreamlining\n• fear-setting\n• relative-income"]
+    E["E — Eliminate\n• eighty-twenty\n• parkinsons-law\n• low-info-diet\n• not-to-do-list\n• batching\n• interruption-killer"]
+    A["A — Automate\n• automate-first ★\n• make-it-a-skill ★\n• outsourcing\n• email-autoresponder\n• muse\n• muse-test\n• muse-launcher ★\n• income-autopilot"]
+    L["L — Liberate\n• remote-work-proposal\n• mini-retirement"]
+    M["Mindset\n• new-rich-rules\n• comfort-challenge\n• cold-outreach\n• expert-research\n• deep-research ★"]
 
-    LD --> D --> E --> A --> L
-    LD --> M
+    LD --> D & E & A & L & M
 ```
 
 ★ = 2026 AI extensions
