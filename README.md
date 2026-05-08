@@ -88,8 +88,8 @@ See each skill's **Related Skills** section for the full map.
 Use `npx skills` to install skills directly:
 
 ```bash
-# Install all skills
-npx skills add SidekicksStudio/fhww-skills
+# Install all skills (no prompts)
+npx skills add SidekicksStudio/fhww-skills --all
 
 # Install specific skills
 npx skills add SidekicksStudio/fhww-skills --skill dreamlining fear-setting

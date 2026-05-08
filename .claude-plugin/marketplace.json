@@ -12,7 +12,7 @@
     {
       "name": "fhww-skills",
       "description": "26 skills covering The 4-Hour Workweek (dreamlining, fear-setting, deal-framework, eighty-twenty, muse, etc.) plus 4 AI-native 2026 extensions (automate-first, make-it-a-skill, muse-launcher, deep-research) that update the book's outsource-to-a-human reflex to AI-first automation",
-      "source": "./"
+      "source": "skills"
     }
   ]
 }
